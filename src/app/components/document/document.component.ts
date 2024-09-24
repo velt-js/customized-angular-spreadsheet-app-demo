@@ -28,6 +28,11 @@ export class DocumentComponent {
 
 				// Contain your comments in a document by setting a Document ID & Name
 				this.client.setDocument('sheets', { documentName: 'sheets' });
+
+				// let commentElement = this.client?.getCommentElement()
+				let commentElement = this.client?.getCommentElement()
+				commentElement.enableBubbleOnPin()
+				commentElement.enableMultiThreadMode();
 			}
 		});
 	}
@@ -51,7 +56,7 @@ export class DocumentComponent {
 
 	// Set you Row Data
 	rowData = ROW_DATA
-	
+
 	// Define your Columns and Add cell renderer function
 	colDefs: ColDef[] = [
 		{

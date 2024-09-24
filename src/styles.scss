@@ -187,10 +187,9 @@ velt-notifications-tool {
 .attachments {
 	display: flex !important;
 	flex-direction: row !important;
-	justify-content: space-between;
-	padding: 8px;
+	justify-content: flex-start;
 	padding-top: 0;
-	padding-left: 4px;
+	margin: 4px;
 
 	.all-options {
 		transition: width 0.3s ease-in-out;
@@ -258,7 +257,6 @@ button {
 }
 
 .velt-comment-dialog--no-comments {
-	left: -15%;
 	// margin-left: 8px;
 	border-radius: 1.25rem !important;
 	// padding: 4px !important;
@@ -268,6 +266,12 @@ button {
 	border-radius: 1rem !important;
 
 	overflow: hidden;
+
+
+	.velt-multi-thread-comment-dialog-container {
+		background-color: transparent !important;
+		box-shadow: none !important;
+	}
 
 	.velt-composer-input-focused {}
 }
@@ -401,7 +405,7 @@ velt-comment-dialog-header-wireframe {
 	padding: 0 !important;
 	border-radius: 1rem !important;
 	overflow: hidden;
-	margin: 8px;
+	// margin: 8px;
 
 	app-comment-dialog-composer {
 
@@ -409,8 +413,9 @@ velt-comment-dialog-header-wireframe {
 		.velt-composer-input-focused,
 		&>div {
 			position: relative;
-			margin: 0.5rem !important;
+			// margin: 0.5rem !important;
 			padding: 0.75rem;
+			padding-top: 0 !important;
 			margin-top: 0 !important;
 			//background-color: light-dark(#FAFAFA, #1A1A1A);
 			background-color: transparent !important;
@@ -425,6 +430,10 @@ velt-comment-dialog-header-wireframe {
 					border: 2px solid light-dark(var(--light-bg-1), var(--dark-bg-1));
 					border-radius: 0.75rem !important;
 					background-color: light-dark(#FFFFFF, #0F0F0F) !important;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: flex-end;
 				}
 
 				.attachments {
@@ -437,6 +446,16 @@ velt-comment-dialog-header-wireframe {
 			}
 		}
 
+	}
+
+	velt-comment-dialog-composer-wireframe {
+		app-comment-dialog-composer-input {
+			display: grid;
+			place-self: center !important;
+			border-top: none !important;
+			padding: 0 !important;
+			margin-top: 0 !important;
+		}
 	}
 }
 
@@ -454,8 +473,12 @@ velt-comment-dialog-header-wireframe {
 	}
 
 
+
+
 	velt-comment-dialog-composer-wireframe {
 		app-comment-dialog-composer-input {
+			display: grid;
+			place-self: center !important;
 			border-top: none !important;
 			padding: 0 !important;
 			margin-top: 0 !important;
@@ -639,4 +662,46 @@ app-comment-dialog-thread-card:not(:first-of-type) {
 	padding-right: 0;
 	margin-left: 0.75rem;
 	border-left: 1px solid light-dark(var(--light-bg-1), var(--dark-bg-1));
+}
+
+#comment-pin-block {
+	width: 100px !important;
+	height: 52px !important;
+	right: -10px !important;
+	position: absolute;
+	top: 0;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.velt-comment-pin-bubble-container {
+	background-color: light-dark(#f7f7f7, #1a1a1a) !important;
+	color: light-dark(#625DF5, #9d9af0) !important;
+}
+
+velt-comment-pin-bubble-internal {
+	position: absolute;
+	right: 0;
+	/* top: 50%; */
+	transform: translate(-10%, 50%);
+}
+
+velt-multi-thread-comment-dialog-internal {
+	border: 1px solid light-dark(var(--light-bg-1), var(--dark-bg-1)) !important;
+	border-radius: 1rem !important;
+	overflow: hidden;
+	box-shadow: 0 4px 24px 2px light-dark(var(--light-bg-1), var(--dark-bg-1));
+
+	.velt-inline-comments-section--info {
+		width: 100% !important;
+		padding: 0.75rem 1rem !important;
+	}
+}
+
+app-comment-dialog-composer-assign-user {
+	position: absolute;
+}
+
+.velt-multi-thread-comment-dialog-minimal-filter-dropdown--content {
+	z-index: 12 !important;
 }
