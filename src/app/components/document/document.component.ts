@@ -33,6 +33,8 @@ export class DocumentComponent {
 				let commentElement = this.client?.getCommentElement()
 				commentElement.enableBubbleOnPin()
 				commentElement.enableMultiThreadMode();
+
+				this.client.getCommentElement().disableCommentPinHighlighter()
 			}
 		});
 	}
