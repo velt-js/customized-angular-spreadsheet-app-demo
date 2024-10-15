@@ -97,8 +97,26 @@
 	</velt-comment-dialog-wireframe>
 
 	<velt-comment-dialog-toggle-reply-wireframe>
-
 	</velt-comment-dialog-toggle-reply-wireframe>
+
+	<velt-multi-thread-comment-dialog-wireframe>
+		<velt-if condition="{nonDraftCommentsCount} > 0">
+			<div class="header">
+				<velt-multi-thread-comment-dialog-comment-count-wireframe></velt-multi-thread-comment-dialog-comment-count-wireframe>
+				<velt-multi-thread-comment-dialog-new-thread-button-wireframe></velt-multi-thread-comment-dialog-new-thread-button-wireframe>
+
+				<velt-multi-thread-comment-dialog-minimal-filter-dropdown-wireframe>
+				</velt-multi-thread-comment-dialog-minimal-filter-dropdown-wireframe>
+				<velt-multi-thread-comment-dialog-close-button-wireframe></velt-multi-thread-comment-dialog-close-button-wireframe>
+			</div>
+		</velt-if>
+
+		<velt-multi-thread-comment-dialog-list-wireframe></velt-multi-thread-comment-dialog-list-wireframe>
+		<velt-multi-thread-comment-dialog-composer-container-wireframe></velt-multi-thread-comment-dialog-composer-container-wireframe>
+
+		<velt-multi-thread-comment-dialog-empty-placeholder-wireframe></velt-multi-thread-comment-dialog-empty-placeholder-wireframe>
+
+	</velt-multi-thread-comment-dialog-wireframe>
 
 
 </velt-wireframe>
