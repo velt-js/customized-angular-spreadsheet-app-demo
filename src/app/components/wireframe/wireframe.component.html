@@ -102,12 +102,23 @@
 	<velt-multi-thread-comment-dialog-wireframe>
 		<velt-if condition="{nonDraftCommentsCount} > 0">
 			<div class="header">
-				<velt-multi-thread-comment-dialog-comment-count-wireframe></velt-multi-thread-comment-dialog-comment-count-wireframe>
-				<velt-multi-thread-comment-dialog-new-thread-button-wireframe></velt-multi-thread-comment-dialog-new-thread-button-wireframe>
+				<p>
+					<velt-multi-thread-comment-dialog-comment-count-wireframe></velt-multi-thread-comment-dialog-comment-count-wireframe>
+					<velt-if condition="{nonDraftCommentsCount} > 1">
+						Comments
+					</velt-if>
+					<velt-if condition="{nonDraftCommentsCount} <= 1">
+						Comment
+					</velt-if>
+				</p>
 
-				<velt-multi-thread-comment-dialog-minimal-filter-dropdown-wireframe>
-				</velt-multi-thread-comment-dialog-minimal-filter-dropdown-wireframe>
-				<velt-multi-thread-comment-dialog-close-button-wireframe></velt-multi-thread-comment-dialog-close-button-wireframe>
+				<div class="actions">
+					<velt-multi-thread-comment-dialog-new-thread-button-wireframe></velt-multi-thread-comment-dialog-new-thread-button-wireframe>
+	
+					<velt-multi-thread-comment-dialog-minimal-filter-dropdown-wireframe>
+					</velt-multi-thread-comment-dialog-minimal-filter-dropdown-wireframe>
+					<velt-multi-thread-comment-dialog-close-button-wireframe></velt-multi-thread-comment-dialog-close-button-wireframe>
+				</div>
 			</div>
 		</velt-if>
 

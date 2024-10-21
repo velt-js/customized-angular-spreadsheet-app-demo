@@ -737,3 +737,35 @@ snippyly-user-avatar {
 
 	}
 }
+
+velt-multi-thread-comment-dialog-wireframe {
+	velt-if {
+		width: 100% !important;
+
+		.header {
+			width: 100% !important;
+			justify-content: space-between;
+			padding: 0.5rem 1rem;
+
+			p {
+				font-size: 0.825rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 0.15rem;
+			}
+
+
+			.actions {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 0.5rem;
+			}
+
+		}
+
+	}
+}
