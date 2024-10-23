@@ -273,7 +273,13 @@ button {
 		box-shadow: none !important;
 	}
 
-	.velt-composer-input-focused {}
+	velt-comment-dialog-composer-wireframe{
+		background-color: transparent !important;
+
+		app-comment-dialog-composer-avatar{
+			display: none;
+		}
+	}
 }
 
 
@@ -546,6 +552,10 @@ velt-comment-dialog-toggle-reply-wireframe {
 	opacity: 0.5;
 }
 
+.velt-toggle-reply--button{
+	margin-left: 2.25rem !important;
+}
+
 .velt-thread-card--name {
 	font-size: 14px !important;
 }
@@ -739,6 +749,7 @@ snippyly-user-avatar {
 }
 
 velt-multi-thread-comment-dialog-wireframe {
+	width: 100% !important;
 	velt-if {
 		width: 100% !important;
 
