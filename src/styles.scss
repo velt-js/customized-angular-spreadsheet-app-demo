@@ -104,6 +104,11 @@ button {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
+			div.velt-cell-wrapper {
+				width: auto;
+				min-width: 40px;
+			}
 		}
 	}
 
@@ -273,10 +278,10 @@ button {
 		box-shadow: none !important;
 	}
 
-	velt-comment-dialog-composer-wireframe{
+	velt-comment-dialog-composer-wireframe {
 		background-color: transparent !important;
 
-		app-comment-dialog-composer-avatar{
+		app-comment-dialog-composer-avatar {
 			display: none;
 		}
 	}
@@ -552,7 +557,7 @@ velt-comment-dialog-toggle-reply-wireframe {
 	opacity: 0.5;
 }
 
-.velt-toggle-reply--button{
+.velt-toggle-reply--button {
 	margin-left: 2.25rem !important;
 }
 
@@ -750,6 +755,7 @@ snippyly-user-avatar {
 
 velt-multi-thread-comment-dialog-wireframe {
 	width: 100% !important;
+
 	velt-if {
 		width: 100% !important;
 

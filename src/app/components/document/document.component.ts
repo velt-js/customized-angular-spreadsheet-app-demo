@@ -158,7 +158,11 @@ export class DocumentComponent {
 
 		const cellId = `cell-${params.data.columnId}-${params.colDef.field}`;
 		const commentTool = isNaN(params.value) ?
-			`<velt-comment-tool shadow-dom="false" id="${cellId}" target-comment-element-id="${cellId}"></velt-comment-tool>` :
+			`
+			<div id="${cellId}" class="velt-cell-wrapper" >
+				<velt-comment-tool shadow-dom="false" target-comment-element-id="${cellId}"></velt-comment-tool>
+			</div>
+			` :
 			'';
 
 		return `
